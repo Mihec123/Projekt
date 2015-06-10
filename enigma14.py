@@ -113,13 +113,13 @@ class Stevec():
         #gumba za kodiranje in dekodiranje
 
         gumb_kodiraj = Radiobutton(master, text = "kodiraj", value=2,indicatoron = 0,command = self.kodiraj_stanje)
-        gumb_kodiraj.grid(row = 9, column=2,columnspan=1)
+        gumb_kodiraj.grid(row = 9, column=2)
 
         gumb_dekodiraj= Radiobutton(master, text = "dekodiraj", value=3, indicatoron = 0,command = self.dekodiraj_stanje)
-        gumb_dekodiraj.grid(row=9, column =4, columnspan=1)
+        gumb_dekodiraj.grid(row=9, column =3)
 
         gumb_pozeni = Button(master, text="Pozeni", command = self.pozeni)
-        gumb_pozeni.grid(row = 10, column = 3, columnspan = 1)
+        gumb_pozeni.grid(row = 10, column = 2, columnspan=2)
 
         #gumb za odpriranje datoteke
         
@@ -139,16 +139,22 @@ class Stevec():
 
         canvas.create_image(150,130, image=self.photo)
 
-        #Label v katerem se izpise text v datoteki
+        #Textwidget v katerem se izpise text v datoteki
         niz = self.tekst
-        self.text_insert= Text(root,height=5,width=30)
+        self.text_insert= Text(root,height=9,width=30)
         self.text_insert.insert(END, niz)
-        self.text_insert.grid(row=0,rowspan=9,column=2)
+        self.text_insert.grid(row=1,rowspan=9,column=2)
+
+        label_napis_dat = Label(master, text="Besedilo v datoteki")
+        label_napis_dat.grid(row=0, column=2)
 
         niz1 = self.koda
-        self.text_out = Text(root,height=5,width=30)
+        self.text_out = Text(root,height=9,width=30)
         self.text_out.insert(END, niz)
-        self.text_out.grid(row=0,rowspan=9,column=3)
+        self.text_out.grid(row=1,rowspan=9,column=3)
+
+        label_napis_izh = Label(master, text="Besedilo, ki bo v izhodni datoteki")
+        label_napis_izh.grid(row=0, column=3)
 
       
 
