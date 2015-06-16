@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import filedialog
 #Stanja
 NEVTRALNO = 0
 KODIRANJE = 1
